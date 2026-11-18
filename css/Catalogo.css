@@ -1,0 +1,122 @@
+/* =================================
+   CONFIGURACIÓN GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5eee5;
+    color: #392725;
+}
+
+
+/* =================================
+   BARRA DE NAVEGACIÓN
+================================= */
+
+.encabezado {
+    background-color: #392725;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+/* LOGO */
+
+.logo h1 {
+    color: #f5e5d0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* =================================
+   MENÚ DE NAVEGACIÓN
+================================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.menu a:hover {
+    background-color: #e9c6a5;
+    color: #392725;
+}
+
+/* PÁGINA ACTUAL */
+
+.menu a.activo {
+    background-color: #e9c6a5;
+    color: #392725;
+}
+
+
+/* =================================
+   CONTENIDO PRINCIPAL
+================================= */
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #392725;
+}
+
+main p {
+    font-size: 18px;
+    color: #70564c;
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   ADAPTACIÓN A CELULARES
+================================= */
+
+@media (max-width: 768px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+}
