@@ -39,7 +39,7 @@ main {
 }
 
 .logo-img {
-    width: 130px;
+    width: 150px;
     height: auto;
     object-fit: contain;
     display: block;
@@ -128,7 +128,7 @@ main {
 }
 
 .img-titulo {
-    width: 55px;
+    width:150px;
     height: auto;
     display: block;
     margin: 0 auto 2px auto;
