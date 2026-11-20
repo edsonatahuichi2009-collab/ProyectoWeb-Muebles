@@ -1,263 +1,353 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Contáctanos | Muebles Elegance</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9e9d9;
-            color: #351609;
-        }
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/contacto.css">
 
-        /* MENU */
-        header {
-            background-color: #351609;
-            color: white;
-            padding: 15px 35px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        header h2 {
-            font-size: 23px;
-        }
+    <!-- TIPOGRAFIAS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
-        nav a {
-            text-decoration: none;
-            color: white;
-            margin: 12px;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #e9c49b;
-        }
-
-        /* CONTENEDOR */
-        .contenedor {
-            min-height: 75vh;
-            padding: 40px 8%;
-            background: linear-gradient(120deg, #f9e9d9, #edc99f);
-        }
-
-        .titulo {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .titulo h1 {
-            font-size: 35px;
-            margin-bottom: 10px;
-        }
-
-        .titulo p {
-            font-size: 17px;
-        }
-
-        /* CONTENIDO */
-        .contenido {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .informacion {
-            width: 45%;
-        }
-
-        .dato {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 25px;
-        }
-
-        .dato span {
-            background-color: #351609;
-            color: white;
-            width: 42px;
-            height: 42px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-        }
-
-        .informacion h3 {
-            margin-top: 30px;
-            margin-bottom: 18px;
-        }
-
-        /* REDES */
-        .redes {
-            display: flex;
-            gap: 18px;
-        }
-
-        .redes a {
-            text-decoration: none;
-            background-color: #351609;
-            color: white;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* FORMULARIO */
-        .formulario {
-            width: 48%;
-            background-color: #e9c49b;
-            padding: 30px;
-            border-radius: 20px;
-        }
-
-        .formulario input,
-        .formulario textarea {
-            width: 100%;
-            padding: 13px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 10px;
-            outline: none;
-        }
-
-        .formulario textarea {
-            height: 100px;
-            resize: none;
-        }
-
-        .formulario button {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 25px;
-            background-color: #351609;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .formulario button:hover {
-            background-color: #8b5934;
-        }
-
-        /* PIE DE PAGINA */
-        footer {
-            background-color: #351609;
-            color: white;
-            text-align: center;
-            padding: 18px;
-        }
-
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .contenido {
-                flex-direction: column;
-            }
-
-            .informacion,
-            .formulario {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <header>
-        <h2>🏡 Mi Hogar</h2>
+    <!-- =====================================
+         MENU PRINCIPAL
+    ====================================== -->
 
-        <nav>
-            <a href="index.html">INICIO</a>
-            <a href="productos.html">PRODUCTOS</a>
-            <a href="nosotros.html">NOSOTROS</a>
-            <a href="contacto.html">CONTACTO</a>
-        </nav>
-    </header>
+    <header class="menu">
 
-    <main class="contenedor">
+        <div class="logo">
 
-        <div class="titulo">
-            <h1>✉ Contáctanos</h1>
-            <p>Estamos aquí para ayudarte</p>
+            <!-- LOGO SUPERIOR -->
+            <img src="../img/Logo_principal.png"
+                 alt="Logo Muebles Elegance"
+                 class="logo-imagen">
+
+            <div class="logo-texto">
+                <h2>Muebles</h2>
+                <h2>Elegance</h2>
+            </div>
+
         </div>
 
+
+        <!-- NAVEGACION -->
+        <nav class="menu-principal">
+
+            <a href="../index.html">Inicio</a>
+
+            <a href="../Catalogo.html">Catálogo</a>
+
+            <a href="../muebles.html">Sobre Nosotros</a>
+
+            <a href="contacto.html" class="activo">Contáctanos</a>
+
+        </nav>
+
+
+        <!-- REDES DEL MENU -->
+        <div class="redes-menu">
+
+            <a href="https://wa.me/59171234567"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="WhatsApp">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+            <a href="https://www.instagram.com/TU_USUARIO/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+            <a href="https://www.facebook.com/TU_PAGINA"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook"></i>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+    ====================================== -->
+
+    <main class="contacto">
+
+
+        <!-- TITULO -->
+        <section class="titulo">
+
+            <span></span>
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h1>Contáctanos</h1>
+
+            <span></span>
+
+            <p>Estamos aquí para ayudarte</p>
+
+        </section>
+
+
+
+        <!-- INFORMACION Y FORMULARIO -->
         <section class="contenido">
 
+
+            <!-- INFORMACION DE CONTACTO -->
             <div class="informacion">
 
-                <div class="dato">
-                    <span>📞</span>
-                    <p>+591 70000000</p>
+
+                <!-- PLANTA DECORATIVA IZQUIERDA -->
+                <div class="espacio-imagen">
+
+                    <img src="../img/Planta_contacto_sin_fondo.png"
+                         alt="Planta decorativa">
+
                 </div>
 
+
+
+                <!-- TELEFONO -->
                 <div class="dato">
-                    <span>✉️</span>
-                    <p>mihogar@gmail.com</p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <p>
+                        <a href="tel:+59171234567">
+                            +591 71234567
+                        </a>
+                    </p>
+
                 </div>
 
+
+
+                <!-- CORREO -->
                 <div class="dato">
-                    <span>📍</span>
-                    <p>Cochabamba, Bolivia</p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <p>
+                        <a href="mailto:muebles.elegance@gmail.com">
+                            muebles.elegance@gmail.com
+                        </a>
+                    </p>
+
                 </div>
 
-                <h3>Síguenos en nuestras redes</h3>
 
+
+                <!-- UBICACION -->
+                <div class="dato">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Principal+123+Cochabamba+Bolivia"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Av. Principal #123,<br>
+                            Cochabamba, Bolivia
+
+                        </a>
+                    </p>
+
+                </div>
+
+
+
+                <!-- REDES SOCIALES -->
                 <div class="redes">
-                    <a href="#">f</a>
-                    <a href="#">◎</a>
-                    <a href="#">▶</a>
+
+                    <a href="https://wa.me/59171234567"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+
+                    <a href="https://www.instagram.com/TU_USUARIO/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="https://www.facebook.com/TU_PAGINA"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
                 </div>
+
 
             </div>
 
+
+
+            <!-- =====================================
+                 FORMULARIO DE CONTACTO
+            ====================================== -->
+
             <div class="formulario">
 
-                <form>
-                    <input type="text" placeholder="Nombre completo" required>
+                <form id="formulario-contacto">
 
-                    <input type="email" placeholder="Correo electrónico" required>
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Nombre"
+                        name="nombre"
+                        required
+                    >
 
-                    <textarea placeholder="Escribe tu mensaje..." required></textarea>
 
-                    <button type="submit">➤ Enviar mensaje</button>
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="Correo Electrónico"
+                        name="correo"
+                        required
+                    >
+
+
+                    <textarea
+                        id="mensaje"
+                        placeholder="Mensaje"
+                        name="mensaje"
+                        required
+                    ></textarea>
+
+
+                    <button type="submit">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Enviar
+
+                    </button>
+
                 </form>
 
             </div>
 
+
         </section>
+
     </main>
 
+
+
+    <!-- =====================================
+         PIE DE PAGINA
+    ====================================== -->
+
     <footer>
-        <p>© 2026 Mi Hogar | Todos los derechos reservados</p>
+
+
+        <div class="footer-logo">
+
+            <!-- LOGO INFERIOR -->
+            <img src="../img/Logo_principal.png"
+                 alt="Logo Muebles Elegance"
+                 class="footer-imagen">
+
+            <strong>Muebles Elegance</strong>
+
+        </div>
+
+
+        <p>
+            Transformamos tus espacios,
+            creamos tu comodidad.
+        </p>
+
+
+        <span>
+            © 2026 Muebles Elegance.
+            Todos los derechos reservados.
+        </span>
+
+
     </footer>
+
+
+
+    <!-- =====================================
+         FUNCION DEL FORMULARIO
+    ====================================== -->
+
+    <script>
+
+        document.getElementById("formulario-contacto").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const nombre = document.getElementById("nombre").value.trim();
+
+            const correo = document.getElementById("correo").value.trim();
+
+            const mensaje = document.getElementById("mensaje").value.trim();
+
+            const destinatario = "muebles.elegance@gmail.com";
+
+            const asunto = "Nuevo mensaje desde Muebles Elegance";
+
+            const contenido =
+                "Nombre: " + nombre + "\n" +
+                "Correo: " + correo + "\n\n" +
+                "Mensaje:\n" + mensaje;
+
+            const enlace =
+                "mailto:" + destinatario +
+                "?subject=" + encodeURIComponent(asunto) +
+                "&body=" + encodeURIComponent(contenido);
+
+            window.location.href = enlace;
+
+        });
+
+    </script>
+
 
 </body>
 </html>
