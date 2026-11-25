@@ -6,255 +6,316 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f6efe7; /* Fondo crema claro */
-    color: #3a2315;
-    min-height: 100vh;
+    background-color: #f8f1e9;
+    color: #2b180d;
+    height: 100vh;
+    min-height: 650px;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
-/* --- NAVBAR --- */
+/* --- BARRA DE NAVEGACIÓN --- */
 .navbar {
-    background-color: #3a2214; /* Marrón oscuro */
-    padding: 15px 5%;
+    background-color: #3a2113;
+    padding: 12px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 10;
+    z-index: 20;
+    flex-shrink: 0;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
 }
 
 .logo-img {
-    height: 45px;
+    height: 46px;
     width: auto;
 }
 
 .logo-text {
     font-family: 'Playfair Display', serif;
-    color: #f6efe7;
-    font-size: 1.3rem;
-    line-height: 1.1;
+    color: #f8f1e9;
+    font-size: 1.4rem;
+    line-height: 1.05;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 32px;
 }
 
 .nav-links a {
-    color: #f6efe7;
+    color: #f8f1e9;
     text-decoration: none;
-    font-size: 0.95rem;
-    padding: 8px 20px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
+    font-size: 1rem;
+    padding: 8px 24px;
+    border-radius: 30px;
+    transition: 0.25s;
 }
 
-.nav-links a:hover {
-    color: #d8b28a;
+.nav-links a:hover:not(.active) {
+    color: #e3be96;
 }
 
-/* Botón activo "Sobre Nosotros" */
 .nav-links a.active {
-    background-color: #d8b28a;
-    color: #3a2214;
+    background-color: #e3be96;
+    color: #2b180d;
     font-weight: 600;
 }
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 14px;
 }
 
 .social-icons a {
-    color: #f6efe7;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: #f8f1e9;
+    font-size: 1.3rem;
+    transition: 0.25s;
 }
 
 .social-icons a:hover {
-    color: #d8b28a;
-    transform: scale(1.1);
+    color: #e3be96;
 }
 
-/* --- SECCIÓN SOBRE NOSOTROS --- */
-.about-section {
+/* --- SECCIÓN CENTRAL --- */
+.main-container {
     flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 8%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Ondas decorativas sutiles en el fondo */
-.bg-shape-top {
+.wave-top {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    background-color: #ebd7c1;
-    border-bottom-left-radius: 50% 80%;
+    left: 0;
+    width: 100%;
+    height: 240px;
     z-index: 1;
+    pointer-events: none;
 }
 
-.about-container {
+.content-wrapper {
+    width: 100%;
+    flex: 1;
+    padding: 15px 0 0 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
-    max-width: 1200px;
-    width: 100%;
+    gap: 35px;
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 
-/* Columna Izquierda */
-.about-content {
-    flex: 1;
+/* --- COLUMNA IZQUIERDA (TEXTOS GRANDES) --- */
+.left-side {
+    flex: 0 0 48%;
+    max-width: 640px;
 }
 
-.title-wrapper {
+.title-block {
     text-align: center;
-    margin-bottom: 25px;
-}
-
-.title-icon {
-    font-size: 1.8rem;
-    color: #3a2214;
-    margin-bottom: 5px;
-}
-
-.title-line-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.title-line-group h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: #3a2214;
-    white-space: nowrap;
-}
-
-.title-line-group .line {
-    height: 1.5px;
-    width: 50px;
-    background-color: #8c6d53;
-}
-
-.about-text {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #3a2214;
     margin-bottom: 18px;
 }
 
-/* Iconos de características */
-.features-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 35px;
-    padding-top: 10px;
+.people-icon {
+    font-size: 2.6rem;
+    color: #2b180d;
+    margin-bottom: 2px;
 }
 
-.feature-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.feature-icon {
-    background-color: #4a2e1d;
-    color: #f6efe7;
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
+.heading-lines {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    gap: 20px;
+}
+
+.heading-lines h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.35rem;
+    font-weight: 800;
+    color: #2b180d;
+    white-space: nowrap;
+}
+
+.heading-lines .line {
+    height: 2px;
+    width: 75px;
+    background-color: #5c4330;
+}
+
+.paragraph {
+    font-size: 1.32rem;
+    line-height: 1.48;
+    color: #2b180d;
+    margin-bottom: 18px;
+}
+
+.paragraph strong {
+    font-weight: 700;
+}
+
+/* --- CÁPSULA DE BENEFICIOS --- */
+.benefits-pill {
+    background-color: #ebd5bd;
+    border-radius: 24px;
+    padding: 20px 32px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.benefit i {
+    font-size: 2.2rem;
+    color: #2b180d;
+}
+
+.shield-svg {
     flex-shrink: 0;
 }
 
-.feature-item span {
-    font-size: 0.9rem;
-    font-weight: 500;
+.benefit span {
+    font-size: 1.05rem;
+    font-weight: 600;
     line-height: 1.2;
-    color: #3a2214;
+    color: #2b180d;
 }
 
-/* Columna Derecha (Imagen) */
-.about-image {
-    flex: 1.1;
+/* --- COLUMNA DERECHA (FOTO INTEGRADA SIN SOMBRA FEA) --- */
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
 }
 
-.about-image img {
+.photo-shape {
     width: 100%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(58, 34, 20, 0.15);
-    object-fit: cover;
+    height: 450px;
+    border-top-left-radius: 220px;
+    border-bottom-left-radius: 40px;
+    overflow: hidden;
+    background-color: #f8f1e9;
 }
 
-/* --- FOOTER / FRASE FINAL --- */
-.about-footer {
-    background-color: #4a2e1d;
-    color: #f6efe7;
-    text-align: center;
-    padding: 18px 20px;
+.photo-shape img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    mix-blend-mode: multiply; /* Fusiona cualquier borde blanco de comedor.png con el fondo crema */
+}
+
+/* --- FOOTER ONDULADO SIEMPRE VISIBLE --- */
+.wave-footer {
+    position: relative;
+    width: 100%;
+    height: 82px;
+    z-index: 8;
+    flex-shrink: 0;
+    margin-top: -30px;
+}
+
+.footer-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.quote-box {
     position: relative;
     z-index: 10;
-    border-top: 5px solid #d8b28a;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 12px;
 }
 
-.about-footer p {
+.quote-box p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 1.35rem;
+    font-size: 1.85rem;
+    color: #f8f1e9;
     letter-spacing: 0.5px;
 }
 
-/* --- DISEÑO RESPONSIVO (CELULARES Y TABLETS) --- */
-@media (max-width: 900px) {
+/* --- RESPONSIVO --- */
+@media (max-width: 1024px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+    }
+
     .navbar {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
     }
 
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
     }
 
-    .about-container {
+    .content-wrapper {
         flex-direction: column;
+        padding: 30px 6%;
         text-align: center;
     }
 
-    .features-grid {
-        justify-content: center;
-        flex-wrap: wrap;
+    .left-side {
+        flex: none;
+        width: 100%;
     }
 
-    .bg-shape-top {
+    .heading-lines h1 {
+        font-size: 2.5rem;
+    }
+
+    .paragraph {
+        font-size: 1.1rem;
+    }
+
+    .benefits-pill {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .right-side {
         width: 100%;
-        height: 40%;
-        top: auto;
-        bottom: 0;
-        border-radius: 0;
+    }
+
+    .photo-shape {
+        height: 300px;
+        border-radius: 30px;
+    }
+
+    .wave-footer {
+        margin-top: 20px;
     }
 }

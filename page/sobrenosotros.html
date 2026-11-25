@@ -4,21 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - Muebles Elegance</title>
-    <!-- Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts para la tipografía elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Enlace a tu hoja de estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/sobrenosotros.css">
 </head>
 <body>
 
-    <!-- ENCABEZADO / NAVBAR -->
+    <!-- BARRA DE NAVEGACIÓN -->
     <header class="navbar">
-        <div class="logo-container">
+        <a href="../index.html" class="logo-container">
             <img src="../img/Logo_principal.png" alt="Logo Muebles Elegance" class="logo-img">
             <span class="logo-text">Muebles<br>Elegance</span>
-        </div>
+        </a>
 
         <nav class="nav-links">
             <a href="../index.html">Inicio</a>
@@ -28,73 +25,79 @@
         </nav>
 
         <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </header>
 
-    <!-- SECCIÓN PRINCIPAL: SOBRE NOSOTROS -->
-    <main class="about-section">
-        <!-- Formas curvas decorativas del fondo -->
-        <div class="bg-shape-top"></div>
-        <div class="bg-shape-bottom"></div>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container">
+        <!-- Curva decorativa beige superior izquierda -->
+        <svg class="wave-top" viewBox="0 0 1440 300" preserveAspectRatio="none">
+            <path fill="#e7d1b8" d="M0,0 L1440,0 L1440,60 C1050,0 750,120 420,90 C150,65 40,145 0,240 Z"></path>
+        </svg>
 
-        <div class="about-container">
-            <!-- Columna Izquierda: Texto e Iconos -->
-            <div class="about-content">
-                <div class="title-wrapper">
-                    <i class="fa-solid fa-users-line title-icon"></i>
-                    <div class="title-line-group">
+        <div class="content-wrapper">
+            <!-- COLUMNA IZQUIERDA (TEXTOS GRANDES COMO EN LA IMAGEN 1) -->
+            <div class="left-side">
+                <div class="title-block">
+                    <i class="fa-solid fa-users people-icon"></i>
+                    <div class="heading-lines">
                         <span class="line"></span>
                         <h1>Sobre Nosotros</h1>
                         <span class="line"></span>
                     </div>
                 </div>
 
-                <p class="about-text">
+                <p class="paragraph">
                     En <strong>Muebles Elegance</strong> creemos que un hogar bien decorado hace la vida más especial.
                 </p>
-                <p class="about-text">
+                <p class="paragraph">
                     Ofrecemos muebles de alta calidad, diseño moderno y precios accesibles, para que disfrutes de espacios únicos y llenos de estilo.
                 </p>
 
-                <!-- 3 Beneficios con iconos -->
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fa-regular fa-gem"></i>
-                        </div>
+                <!-- CÁPSULA BEIGE CON LOS 3 ICONOS -->
+                <div class="benefits-pill">
+                    <div class="benefit">
+                        <i class="fa-regular fa-gem"></i>
                         <span>Alta<br>Calidad</span>
                     </div>
 
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fa-solid fa-truck-fast"></i>
-                        </div>
+                    <div class="benefit">
+                        <i class="fa-solid fa-truck"></i>
                         <span>Envíos a<br>todo el país</span>
                     </div>
 
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                    <div class="benefit">
+                        <svg class="shield-svg" viewBox="0 0 24 24" width="38" height="38">
+                            <path fill="#2b180d" d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/>
+                            <path fill="#ebd5bd" d="M10.5 15.5l-3.2-3.2 1.4-1.4 1.8 1.8 4.8-4.8 1.4 1.4-6.2 6.2z"/>
+                        </svg>
                         <span>Compra<br>Segura</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Columna Derecha: Imagen del comedor -->
-            <div class="about-image">
-                <img src="../img/comedor.png" alt="Comedor moderno Muebles Elegance">
+            <!-- COLUMNA DERECHA: FOTO DEL COMEDOR SIN MARCOS RAROS -->
+            <div class="right-side">
+                <div class="photo-shape">
+                    <img src="../img/comedor.png" alt="Comedor Muebles Elegance">
+                </div>
             </div>
         </div>
-    </main>
 
-    <!-- PIE DE PÁGINA CON FRASE -->
-    <footer class="about-footer">
-        <p>“Tu hogar, nuestro compromiso”</p>
-    </footer>
+        <!-- ONDA INFERIOR MARRÓN CON FRASE -->
+        <footer class="wave-footer">
+            <svg class="footer-svg" viewBox="0 0 1440 150" preserveAspectRatio="none">
+                <path fill="#d8b28a" d="M0,65 C420,105 920,115 1440,5 L1440,150 L0,150 Z"></path>
+                <path fill="#3b2213" d="M0,78 C420,118 920,128 1440,20 L1440,150 L0,150 Z"></path>
+            </svg>
+            <div class="quote-box">
+                <p>“Tu hogar, nuestro compromiso”</p>
+            </div>
+        </footer>
+    </main>
 
 </body>
 </html>
