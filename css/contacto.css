@@ -1,4 +1,3 @@
-
 /* =====================================
    CONFIGURACION GENERAL
 ===================================== */
@@ -32,18 +31,13 @@ body {
 .menu {
     width: 100%;
     min-height: 145px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     background-color: #351A0E;
     padding: 10px 4%;
     color: white;
 }
-
-
-/* LOGO SUPERIOR */
 
 .logo {
     display: flex;
@@ -54,7 +48,6 @@ body {
 .logo-imagen {
     width: 160px;
     height: 120px;
-
     object-fit: contain;
     display: block;
     flex-shrink: 0;
@@ -128,32 +121,25 @@ body {
     width: 100%;
     flex: 1;
     min-height: 520px;
-
     padding: 25px 5% 35px;
-
     position: relative;
     isolation: isolate;
     overflow: hidden;
-
     background-color: #FFF1E2;
 }
 
 .contacto::before {
     content: "";
     position: absolute;
-
     width: 450px;
     height: 270px;
-
     top: -150px;
     left: -90px;
-
     background: linear-gradient(
         135deg,
         #EBC99F,
         #D9A66E
     );
-
     border-radius: 50%;
     z-index: -1;
 }
@@ -161,19 +147,15 @@ body {
 .contacto::after {
     content: "";
     position: absolute;
-
     width: 520px;
     height: 260px;
-
     bottom: -170px;
     right: -120px;
-
     background: linear-gradient(
         135deg,
         #D9A66E,
         #B47B42
     );
-
     border-radius: 50%;
     z-index: -1;
 }
@@ -187,30 +169,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 22px;
     flex-wrap: wrap;
-
     margin-bottom: 45px;
 }
 
 .titulo span {
     width: 75px;
     height: 2px;
-
     background-color: #351A0E;
     border-radius: 10px;
 }
 
 .titulo i {
     font-size: 42px;
-
     background-color: #351A0E;
     color: white;
-
     padding: 13px;
     border-radius: 15px;
-
     box-shadow: 0 4px 10px rgba(53, 26, 14, 0.18);
 }
 
@@ -218,40 +194,32 @@ body {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 58px;
     font-weight: bold;
-
     letter-spacing: -1px;
-
     text-shadow: 1px 1px 1px rgba(53, 26, 14, 0.12);
 }
 
 .titulo p {
     width: 100%;
-
     text-align: center;
-
     font-family: 'Montserrat', sans-serif;
     font-size: 23px;
     font-weight: bold;
-
     margin-top: -10px;
 }
 
 
 /* =====================================
-   DISTRIBUCION
+   DISTRIBUCION PRINCIPAL
 ===================================== */
 
 .contenido {
-    width: 82%;
+    width: 90%;
     max-width: 1550px;
-
     margin: 0 auto;
-
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-
-    gap: 55px;
+    gap: 45px;
 }
 
 
@@ -260,8 +228,14 @@ body {
 ===================================== */
 
 .informacion {
-    width: 48%;
+    width: 100%;
     position: relative;
+    display: grid;
+    grid-template-columns: minmax(135px, 0.7fr) minmax(0, 1.3fr);
+    grid-template-rows: repeat(3, auto) auto;
+    align-items: center;
+    column-gap: 18px;
+    row-gap: 18px;
 }
 
 
@@ -272,17 +246,23 @@ body {
 .espacio-imagen {
     position: absolute;
 
-    width:300px;
-    height: 300px;
+    /* Lleva la planta hasta el borde izquierdo */
+    left: calc(-9.5vw - max(0px, (90vw - 1550px) / 2)+50px);
 
-    left: -220px;
-    top: -10px;
+    /* Sube la planta */
+    top: -110px;
+
+    /* IMAGEN MÁS GRANDE */
+    width: 600px;
+    height: 700px;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 
+    overflow: visible;
     z-index: 0;
+    pointer-events: none;
 }
 
 .espacio-imagen img {
@@ -290,9 +270,12 @@ body {
     height: 100%;
 
     object-fit: contain;
-    object-position: center;
+    object-position: left top;
 
     display: block;
+
+    transform: scale(1.40);
+    transform-origin: left top;
 }
 
 
@@ -301,11 +284,12 @@ body {
 ===================================== */
 
 .dato {
+    grid-column: 2;
+
     display: flex;
     align-items: center;
-
-    gap: 25px;
-    margin: 30px 0;
+    gap: 18px;
+    margin: 12px 0;
 
     position: relative;
     z-index: 1;
@@ -314,21 +298,15 @@ body {
 .dato i {
     background-color: #351A0E;
     color: white;
-
     font-size: 26px;
-
     width: 58px;
     height: 58px;
     min-width: 58px;
-
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     box-shadow: 0 4px 9px rgba(53, 26, 14, 0.18);
-
     transition: 0.3s;
 }
 
@@ -338,8 +316,8 @@ body {
 
 .dato p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 1.45;
     letter-spacing: 0.2px;
 }
 
@@ -358,11 +336,11 @@ body {
 ===================================== */
 
 .redes {
+    grid-column: 2;
     display: flex;
     justify-content: center;
-
     gap: 25px;
-    margin: 35px 0;
+    margin: 18px 0;
 
     position: relative;
     z-index: 1;
@@ -371,21 +349,15 @@ body {
 .redes a {
     background-color: #351A0E;
     color: white;
-
     width: 62px;
     height: 62px;
-
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-decoration: none;
     font-size: 30px;
-
     box-shadow: 0 4px 9px rgba(53, 26, 14, 0.18);
-
     transition: 0.3s;
 }
 
@@ -400,7 +372,7 @@ body {
 ===================================== */
 
 .formulario {
-    width: 48%;
+    width: 100%;
     position: relative;
 
     background: linear-gradient(
@@ -411,9 +383,7 @@ body {
 
     border: 1px solid #E4C6A4;
     border-radius: 25px;
-
     padding: 30px 35px;
-
     box-shadow: 0 8px 20px rgba(53, 26, 14, 0.13);
 }
 
@@ -424,7 +394,6 @@ body {
 .formulario form {
     display: flex;
     flex-direction: column;
-
     gap: 15px;
     position: relative;
 }
@@ -435,21 +404,14 @@ body {
 .formulario input,
 .formulario textarea {
     width: 100%;
-
     padding: 16px;
-
     border: 1px solid #D9C5B1;
     border-radius: 17px;
-
     background-color: #FFFCF8;
-
     font-family: 'Montserrat', sans-serif;
     font-size: 19px;
-
     outline: none;
-
     box-shadow: inset 0 2px 4px rgba(53, 26, 14, 0.05);
-
     transition: 0.3s;
 }
 
@@ -469,19 +431,13 @@ body {
 .formulario button {
     background-color: #351A0E;
     color: white;
-
     padding: 17px;
-
     border: none;
     border-radius: 35px;
-
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 22px;
-
     cursor: pointer;
-
     box-shadow: 0 4px 9px rgba(53, 26, 14, 0.18);
-
     transition: 0.3s;
 }
 
@@ -498,16 +454,12 @@ body {
 footer {
     width: 100%;
     min-height: 85px;
-
     background-color: #351A0E;
     color: white;
-
     padding: 15px 4%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     gap: 15px;
     font-size: 15px;
 }
@@ -519,7 +471,6 @@ footer {
     display: flex;
     align-items: center;
     gap: 15px;
-
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 21px;
     font-weight: bold;
@@ -528,7 +479,6 @@ footer {
 .footer-imagen {
     width: 75px;
     height: 60px;
-
     object-fit: contain;
     display: block;
     flex-shrink: 0;
@@ -536,7 +486,6 @@ footer {
 
 footer p {
     color: #E9B879;
-
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-style: italic;
     font-size: 15px;
@@ -576,21 +525,24 @@ footer span {
 
     .contenido {
         width: 90%;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 35px;
     }
 
-    .informacion,
+    .informacion {
+        width: 100%;
+        grid-template-columns: minmax(120px, 0.6fr) minmax(0, 1.4fr);
+    }
+
+    .espacio-imagen {
+        left: -9.5vw;
+        top: -60px;
+        width: 500px;
+        height: 550px;
+    }
+
     .formulario {
         width: 100%;
-    }
-
-    /* PLANTA EN TABLETS */
-    .espacio-imagen {
-        width: 130px;
-        height: 230px;
-
-        left: -95px;
-        top: -10px;
     }
 
     .titulo h1 {
@@ -606,7 +558,6 @@ footer span {
         text-align: center;
         padding: 20px;
     }
-
 }
 
 
@@ -645,6 +596,19 @@ footer span {
     /* OCULTAR PLANTA EN CELULARES */
     .espacio-imagen {
         display: none;
+    }
+
+    .contenido {
+        width: 92%;
+    }
+
+    .informacion {
+        grid-template-columns: 1fr;
+    }
+
+    .informacion .dato,
+    .informacion .redes {
+        grid-column: 1;
     }
 
     .titulo h1 {
@@ -686,5 +650,4 @@ footer span {
         width: 65px;
         height: 52px;
     }
-
 }
