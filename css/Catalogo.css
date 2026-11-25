@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #fdf6ec;
     color: #3b2314;
     display: flex;
@@ -104,8 +104,8 @@ main {
 }
 
 main {
-    padding: 28px 20px 40px;
-    max-width: 1280px;
+    padding: 28px 32px 40px;
+    max-width: 1440px;
     margin: 0 auto;
     width: 100%;
 }
@@ -128,7 +128,7 @@ main {
 }
 
 .img-titulo {
-    width:150px;
+    width: 150px;
     height: auto;
     display: block;
     margin: 0 auto 2px auto;
@@ -150,7 +150,7 @@ main {
 .catalogo {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 16px;
+    gap: 20px;
 }
 
 .tarjeta {
@@ -166,12 +166,13 @@ main {
 
 .img-producto {
     width: 100%;
-    height: 190px;
+    height: 230px;
     object-fit: cover;
     display: block;
 }
 
 .tarjeta h3 {
+    font-family: 'Playfair Display', Georgia, serif;
     margin: 14px 0 2px;
     font-size: 19px;
     color: #2e1a0e;
@@ -231,6 +232,6 @@ footer {
     }
 
     .img-producto {
-        height: 150px;
+        height: 180px;
     }
 }
