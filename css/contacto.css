@@ -14,7 +14,7 @@ html, body {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #351A0E;
     background: #FFF1E2;
     min-height: 100vh;
@@ -22,7 +22,6 @@ body {
     flex-direction: column;
     overflow-x: hidden;
 }
-
 
 /* =====================================
    MENU PRINCIPAL
@@ -54,13 +53,12 @@ body {
 }
 
 .logo-texto h2 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 32px;
     line-height: 32px;
     font-weight: bold;
     letter-spacing: -0.5px;
 }
-
 
 /* NAVEGACION */
 
@@ -68,6 +66,8 @@ body {
     display: flex;
     align-items: center;
     gap: 35px;
+    margin-left: auto;
+    margin-right: 35px;
 }
 
 .menu-principal a {
@@ -91,7 +91,6 @@ body {
     font-weight: bold;
 }
 
-
 /* REDES SUPERIORES */
 
 .redes-menu {
@@ -111,7 +110,6 @@ body {
     color: #E9B879;
     transform: translateY(-3px);
 }
-
 
 /* =====================================
    FONDO Y DECORACIONES
@@ -160,7 +158,6 @@ body {
     z-index: -1;
 }
 
-
 /* =====================================
    TITULO
 ===================================== */
@@ -207,7 +204,6 @@ body {
     margin-top: -10px;
 }
 
-
 /* =====================================
    DISTRIBUCION PRINCIPAL
 ===================================== */
@@ -221,7 +217,6 @@ body {
     align-items: center;
     gap: 45px;
 }
-
 
 /* =====================================
    INFORMACION DE CONTACTO
@@ -238,7 +233,6 @@ body {
     row-gap: 18px;
 }
 
-
 /* =====================================
    PLANTA DECORATIVA IZQUIERDA
 ===================================== */
@@ -247,10 +241,10 @@ body {
     position: absolute;
 
     /* Lleva la planta hasta el borde izquierdo */
-    left: calc(-9.5vw - max(0px, (90vw - 1550px) / 2)+50px);
+    left: calc(-9.5vw - max(0px, (90vw - 2000px) / 2) - 150px);
 
     /* Sube la planta */
-    top: -110px;
+    top: -300px;
 
     /* IMAGEN MÁS GRANDE */
     width: 600px;
@@ -277,7 +271,6 @@ body {
     transform: scale(1.40);
     transform-origin: left top;
 }
-
 
 /* =====================================
    DATOS DE CONTACTO
@@ -330,7 +323,6 @@ body {
     color: #A66D36;
 }
 
-
 /* =====================================
    REDES SOCIALES
 ===================================== */
@@ -366,7 +358,6 @@ body {
     transform: translateY(-5px);
 }
 
-
 /* =====================================
    FORMULARIO
 ===================================== */
@@ -398,7 +389,6 @@ body {
     position: relative;
 }
 
-
 /* CAMPOS */
 
 .formulario input,
@@ -425,7 +415,6 @@ body {
     resize: vertical;
 }
 
-
 /* BOTON ENVIAR */
 
 .formulario button {
@@ -446,7 +435,6 @@ body {
     transform: translateY(-2px);
 }
 
-
 /* =====================================
    PIE DE PAGINA
 ===================================== */
@@ -464,7 +452,6 @@ footer {
     font-size: 15px;
 }
 
-
 /* LOGO INFERIOR */
 
 .footer-logo {
@@ -474,11 +461,12 @@ footer {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 21px;
     font-weight: bold;
+    margin-left: -25px;
 }
 
 .footer-imagen {
-    width: 75px;
-    height: 60px;
+    width: 130px;
+    height: 110px;
     object-fit: contain;
     display: block;
     flex-shrink: 0;
@@ -494,7 +482,6 @@ footer p {
 footer span {
     font-size: 14px;
 }
-
 
 /* =====================================
    RESPONSIVE TABLETS
@@ -517,6 +504,8 @@ footer span {
         flex-wrap: wrap;
         justify-content: center;
         gap: 18px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .redes-menu {
@@ -559,7 +548,6 @@ footer span {
         padding: 20px;
     }
 }
-
 
 /* =====================================
    RESPONSIVE CELULARES
@@ -647,7 +635,7 @@ footer span {
     }
 
     .footer-imagen {
-        width: 65px;
-        height: 52px;
+        width: 75px;
+        height: 62px;
     }
 }
