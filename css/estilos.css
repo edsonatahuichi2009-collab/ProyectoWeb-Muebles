@@ -1,1 +1,31 @@
-body{font-family:Arial;background:#f2f2f2;padding-top:40px;text-align:center;}
+/* Quita los márgenes blancos que pone el navegador por defecto */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* El fondo café oscuro de tu barra superior */
+.header-principal {
+    background-color: #311c12; /* Color café oscuro */
+    color: white;
+    display: flex; /* Alinea los elementos en fila */
+    justify-content: space-between; /* Separa el logo del menú */
+    align-items: center;
+    padding: 20px 50px;
+}
+
+/* El diseño de los links */
+.menu-principal a {
+    color: white;
+    text-decoration: none; /* Quita la línea de abajo */
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+/* El color naranja cuando pasas el mouse o estás en esa pestaña */
+.menu-principal a:hover,
+.menu-principal a.activo {
+    color: #e6a756; 
+    font-weight: bold;
+}
